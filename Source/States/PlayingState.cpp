@@ -16,6 +16,9 @@ StatePlaying::StatePlaying(Application &app, const Config &config)
 
 void StatePlaying::handleEvent(sf::Event e)
 {
+	if (e.key.code == sf::Keyboard::Unknown) {
+		return;
+	}
     m_keyboard.update(e);
 }
 
